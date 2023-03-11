@@ -31,6 +31,8 @@ def get_kth_expiry(symbol, k=1, type=ExpiryType.WEEKLY):
 
 @lru_cache(maxsize=None)
 def _get_expiry_list(symbol, type='list'):
+    if type != 'list':
+        return nsepython.expiry_list(symbol, type)
     convert_to_date = lambda exp_date: _convert_date(exp_date, '%d-%b-%Y', '%d%b%y').upper()
     date_list = map(convert_to_date, nsepython.expiry_list(symbol, type))
     return list(date_list)
@@ -46,8 +48,8 @@ def round_to_base(n, base= 10):
 
 def get_derivatives(symbol):
     if symbol == "NIFTY" or symbol == 'FINNIFTY':
-        min_strike = 15000
-        max_strike = 20000
+        min_strike = 17500
+        max_strike = 18500
         interval = 50
 
         token_manager = TokenManager()
