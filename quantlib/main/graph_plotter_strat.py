@@ -2,14 +2,12 @@
 
 import logging
 import argparse
-from datetime import timedelta, datetime
+from datetime import datetime
 
 from alphatools.backtesting_app import BackTestingApp
 from alphatools.utils.token_manager import TokenManager
 
-import instruments
-import sys
-
+from quantlib import instruments
 
 logging.basicConfig(format='[%(asctime)s] %(levelname)-8s {%(pathname)s:%(lineno)d} : %(message)s',
                     datefmt='%Y-%m-%d %H:%M:%S')

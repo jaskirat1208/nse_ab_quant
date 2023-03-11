@@ -19,7 +19,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/jaskirat1208/backtest-platform",
-    scripts=glob.glob('main/*.py'),
+    scripts=glob.glob('quantlib/main/*.py'),
     packages=setuptools.find_packages(),
     install_requires=install_requires,
     classifiers=[

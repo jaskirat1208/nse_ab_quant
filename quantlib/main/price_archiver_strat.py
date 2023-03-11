@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
 
-import logging
 import argparse
-from datetime import timedelta, datetime
+from datetime import datetime
 
 from alphatools.backtesting_app import BackTestingApp
 
-import instruments
-import sys
+from quantlib import instruments
 
 
 class PriceArchiverStrat(BackTestingApp):
