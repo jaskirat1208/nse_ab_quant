@@ -8,7 +8,7 @@ with open("requirements.txt", "r") as fh:
     install_requires = fh.read()
 
 
-__version__ = "0.4.3"
+__version__ = "0.5.0"
 
 setuptools.setup(
     name="nse_ab_quantlib",
