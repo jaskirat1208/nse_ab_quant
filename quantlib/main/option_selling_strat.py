@@ -2,13 +2,11 @@
 
 import logging
 
-import nsepython
-
 from alphatools.backtesting_app import BackTestingApp
 from datetime import datetime
 from alphatools.utils.token_manager import TokenManager
 
-import instruments
+from quantlib import instruments
 
 
 class OptionSellingStratApp(BackTestingApp):
